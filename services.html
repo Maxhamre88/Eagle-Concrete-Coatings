@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Eagle Concrete Coatings LLC</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0D1B2E;
+            --red: #D90429;
+            --white: #FFFFFF;
+            --light-gray: #F4F7F9;
+            --ice: #F1FAEE;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { line-height: 1.7; color: #333; background: var(--white); scroll-behavior: smooth; }
+        .container { max-width: 1400px; margin: auto; padding: 0 40px; }
+
+        /* --- NAVIGATION --- */
+        nav { background: var(--white); padding: 25px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.6rem; font-weight: 900; color: var(--navy); text-decoration: none; letter-spacing: 1px; }
+        .logo span { color: var(--red); }
+        .nav-links { list-style: none; display: flex; gap: 35px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--navy); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--red); }
+        .btn-quote { background: var(--red); color: white !important; padding: 12px 25px; border-radius: 5px; }
+
+        /* --- PAGE HEADER --- */
+        .page-header { 
+            background: linear-gradient(rgba(13, 27, 46, 0.9), rgba(13, 27, 46, 0.9)), 
+                        url('https://images.unsplash.com/photo-1558442086-8ea19a79cd4d?q=80&w=1200');
+            background-size: cover; background-position: center;
+            color: white; padding: 100px 0; text-align: center;
+        }
+        .page-header h1 { font-size: 3.5rem; text-transform: uppercase; font-weight: 900; }
+
+        /* --- CONTENT BLOCKS --- */
+        .service-section { padding: 80px 0; }
+        .flex-row { display: flex; gap: 60px; align-items: center; flex-wrap: wrap; margin-bottom: 80px; }
+        .flex-row.reverse { flex-direction: row-reverse; }
+        .flex-text { flex: 1; min-width: 350px; }
+        .flex-img { flex: 1; min-width: 350px; }
+        .flex-img img { width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-left: 10px solid var(--red); }
+        
+        h2 { font-size: 2.5rem; color: var(--navy); margin-bottom: 20px; font-weight: 900; }
+        p { margin-bottom: 20px; font-size: 1.1rem; color: #555; }
+        
+        .check-list { list-style: none; margin-top: 25px; }
+        .check-list li { margin-bottom: 12px; font-weight: 600; display: flex; align-items: center; }
+        .check-list li i { color: var(--red); margin-right: 15px; font-size: 1.2rem; }
+
+        /* --- THE 1-DAY PROCESS --- */
+        .process-section { background: var(--navy); color: white; padding: 100px 0; }
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 60px; }
+        .step-card { text-align: center; padding: 20px; }
+        .step-num { font-size: 3.5rem; font-weight: 900; color: var(--red); opacity: 0.4; line-height: 1; }
+        .step-card h3 { margin: 15px 0; font-size: 1.3rem; font-weight: 900; }
+
+        /* --- CALL TO ACTION --- */
+        .cta-footer { text-align: center; padding: 100px 0; background: var(--light-gray); }
+        .btn-red { background: var(--red); color: white; padding: 20px 45px; text-decoration: none; font-weight: 900; border-radius: 5px; display: inline-block; transition: 0.3s; }
+        .btn-red:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(217, 4, 41, 0.3); }
+
+        footer { background: #050b12; color: #777; text-align: center; padding: 40px 0; }
+
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container nav-flex">
+        <a href="index.html" class="logo">EAGLE <span>CONCRETE COATINGS</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html" style="color: var(--red);">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#contact" class="btn-quote">Get Free Quote</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="page-header">
+    <div class="container">
+        <h1>Coating Services</h1>
+        <p>Industrial Strength Solutions for Home and Business</p>
+    </div>
+</header>
+
+<section class="container service-section">
+    <div class="flex-row">
+        <div class="flex-text">
+            <h2>Residential Garage Coatings</h2>
+            <p>Transform your garage with our full-broadcast Polyurea Chip System. The multi-color flake provides a modern, textured look that hides salt and dirt, while the industrial topcoat offers a slip-resistant, durable surface that’s 100% UV stable.</p>
+            <ul class="check-list">
+                <li><i class="fas fa-check-square"></i> 4x More Flexible Than Epoxy</li>
+                <li><i class="fas fa-check-square"></i> 1-Day Installation & Walk-on</li>
+                <li><i class="fas fa-check-square"></i> Extreme Chemical & Salt Resistance</li>
+                <li><i class="fas fa-check-square"></i> Anti-slip Textured Finish</li>
+            </ul>
+        </div>
+        <div class="flex-img">
+            <img src="https://static.homeguide.com/assets/images/content/homeguide-polyurea-garage-floor-coating.jpg" alt="Residential Garage Coating">
+        </div>
+    </div>
+
+    <div class="flex-row reverse">
+        <div class="flex-text">
+            <h2>Commercial & Shop Floors</h2>
+            <p>Our Precision Commercial Coatings are engineered for heavy-duty use. This seamless finish provides superior chemical resistance and a professional showroom shine, brightening your workspace while handling heavy machinery and vehicle traffic.</p>
+            <ul class="check-list">
+                <li><i class="fas fa-check-square"></i> High-Gloss Reflective Finish</li>
+                <li><i class="fas fa-check-square"></i> Impact & Abrasion Resistant</li>
+                <li><i class="fas fa-check-square"></i> Easy to Clean & Maintain</li>
+                <li><i class="fas fa-check-square"></i> Available for Large Square Footage</li>
+            </ul>
+        </div>
+        <div class="flex-img">
+            <img src="https://www.iasolutions.com/blog/wp-content/uploads/2021/06/epoxy-coating-1.jpeg" alt="Commercial Shop Coating">
+        </div>
+    </div>
+</section>
+
+<section class="process-section">
+    <div class="container">
+        <h2 style="text-align: center; color: white;">The 1-Day Process</h2>
+        <div class="process-grid">
+            <div class="step-card">
+                <div class="step-num">01</div>
+                <h3>Diamond Grind</h3>
+                <p>Mechanically prepping the slab for a permanent bond.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">02</div>
+                <h3>Repair</h3>
+                <p>Mending all cracks and pits with rapid-cure menders.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">03</div>
+                <h3>Base Coat</h3>
+                <p>Applying our industrial-strength Polyurea base layer.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">04</div>
+                <h3>Flake</h3>
+                <p>Broadcasting decorative chips for strength and style.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">05</div>
+                <h3>Top Coat</h3>
+                <p>Sealing with a UV-stable, high-gloss clear protector.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-footer">
+    <div class="container">
+        <h2>Ready for a Lifetime Floor?</h2>
+        <p style="margin-bottom: 30px;">Serving the South Metro from Lakeville to Maple Grove.</p>
+        <a href="index.html#contact" class="btn-red">GET A FREE QUOTE</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Eagle Concrete Coatings LLC | Licensed & Insured | (952) 769-7905</p>
+</footer>
+
+</body>
+</html>

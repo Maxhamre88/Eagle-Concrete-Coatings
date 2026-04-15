@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eagle Concrete Coatings LLC | Twin Cities Premium Floor Coatings</title>
+    <meta name="description" content="The Twin Cities' leader in Polyurea garage floor coatings. 1-day installation, lifetime warranty. Serving Maple Grove to Faribault.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0D1B2E;
+            --red: #D90429;
+            --white: #FFFFFF;
+            --ice: #F1FAEE;
+            --dark-blue: #16253D;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { line-height: 1.6; color: var(--navy); background: var(--white); scroll-behavior: smooth; }
+        .container { max-width: 1400px; margin: auto; padding: 0 40px; }
+
+        /* --- NAVIGATION --- */
+        nav { background: var(--white); padding: 25px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.6rem; font-weight: 900; color: var(--navy); text-decoration: none; letter-spacing: 1px; }
+        .logo span { color: var(--red); }
+        
+        .nav-links { list-style: none; display: flex; gap: 35px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--navy); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--red); }
+        
+        .btn-quote { background: var(--red); color: white !important; padding: 12px 25px; border-radius: 5px; }
+
+        /* --- HERO SECTION --- */
+        .hero { 
+            height: 90vh; 
+            background: linear-gradient(rgba(13, 27, 46, 0.75), rgba(13, 27, 46, 0.75)), 
+                        url('https://images.unsplash.com/photo-1590674899484-13da0d1b58f5?auto=format&fit=crop&q=80&w=1600'); 
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; color: white;
+        }
+        .hero h1 { font-size: 5rem; line-height: 1; margin-bottom: 20px; font-weight: 900; text-transform: uppercase; }
+        .hero p { font-size: 1.5rem; margin-bottom: 40px; max-width: 800px; opacity: 0.9; }
+        .hero-btns { display: flex; gap: 20px; }
+        .btn-large { padding: 22px 50px; border-radius: 5px; text-decoration: none; font-weight: 900; font-size: 1.2rem; transition: 0.3s; display: inline-block; }
+        .btn-primary { background: var(--red); color: white; border: none; }
+        .btn-outline { border: 3px solid white; color: white; }
+        .btn-large:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+        /* --- FEATURE GRID --- */
+        .features { padding: 120px 0; background: var(--ice); }
+        .section-title { text-align: center; margin-bottom: 60px; font-size: 2.8rem; font-weight: 900; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .feature-card { background: white; padding: 60px 40px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
+        .feature-card:hover { transform: translateY(-10px); border-bottom: 8px solid var(--red); }
+        .feature-card i { font-size: 4rem; color: var(--navy); margin-bottom: 25px; }
+        .feature-card h3 { font-size: 1.8rem; margin-bottom: 15px; }
+
+        /* --- TESTIMONIALS --- */
+        .testimonials { padding: 100px 0; text-align: center; }
+        .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .test-card { padding: 40px; border: 1px solid #eee; border-radius: 12px; font-style: italic; }
+
+        /* --- CONTACT SECTION --- */
+        .contact { padding: 120px 0; background: var(--navy); color: white; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .contact-form { background: white; padding: 50px; border-radius: 15px; color: var(--navy); }
+        .contact-form input, .contact-form textarea, .contact-form select { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+        .contact-form h2 { margin-bottom: 20px; font-size: 2rem; }
+
+        footer { background: #050b12; color: #777; padding: 60px 0; text-align: center; }
+
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 3.5rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">EAGLE <span>CONCRETE COATINGS</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#contact" class="btn-quote">Get Free Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>High Performance.<br>Beautiful Finish.</h1>
+            <p>The Twin Cities' most durable Polyurea floor coatings. Engineered for Minnesota winters. Installed in just one day.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-large btn-primary">Request Estimate</a>
+                <a href="services.html" class="btn-large btn-outline">Our Services</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">The Eagle Advantage</h2>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Lifetime Warranty</h3>
+                    <p>We provide a full lifetime warranty against peeling, chipping, or delamination. Your floor is protected forever.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>1-Day Installation</h3>
+                    <p>Our professional crews use rapid-cure technology. We prep, coat, and finish your floor in a single day.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Weather Resistant</h3>
+                    <p>4x more flexible than epoxy. Our coatings expand and contract with MN temperature swings without cracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="test-grid">
+            <div class="test-card">
+                <p>"Colton exceeded expectations at a high professional level from our first meeting throughout the whole process. All questions were addressed and his knowledge of the product and process was impressive! His hard work ethic really showed through and I'm thankful I went through Eagle Concrete Coatings! I would recommend them to anyone wanting a garage floor needing cracks repaired and coated!"</p>
+                <strong style="display: block; margin-top: 15px; font-style: normal;">- Anonymous Apple Valley, MN</strong>
+            </div>
+            <div class="test-card">
+                <p>"We hired Colton and his crew to install a new polyurea system on our garage floor. They were a professional crew from quoting the project through final clean up, and the floor system they installed is amazing. It is nearly a year old and it looks just as great today as it did when it was installed. We would proudly recommend Colton and his crew to anyone looking to transform their garage floor from an old, cracked up slab to a fully finished, polyurea painted floor that looks more like it belongs in the house than the garage!"</p>
+                <strong style="display: block; margin-top: 15px; font-style: normal;">- Josh Ripplinger Lakeville, MN</strong>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container contact-grid">
+            <div>
+                <h2 style="font-size: 3rem; margin-bottom: 25px;">Ready to Upgrade?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">Locally owned and operated, serving the entire South Metro. From Maple Grove to Faribault, we bring the showroom to your garage.</p>
+                <div style="font-size: 1.4rem; font-weight: 700;">
+                    <p><i class="fas fa-phone" style="color:var(--red)"></i> (952) 769-7905</p>
+                    <p><i class="fas fa-envelope" style="color:var(--red); margin-top: 15px;"></i> eagleconcretecoatingsl.l.c@gmail.com</p>
+                </div>
+            </div>
+            
+            <form class="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+                <h2>Free Quote Request</h2>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="city" placeholder="Service City (e.g. Lakeville)" required>
+                <select name="project_type">
+                    <option value="Garage">Garage Floor</option>
+                    <option value="Commercial">Commercial/Shop</option>
+                    <option value="Patio">Patio/Exterior</option>
+                </select>
+                <textarea name="message" rows="4" placeholder="How can we help?"></textarea>
+                <button type="submit" class="btn-large btn-primary" style="width: 100%;">Send Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Eagle Concrete Coatings LLC. Licensed & Insured. Serving Minnesota.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Eagle Concrete Coatings LLC</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0D1B2E;
+            --red: #D90429;
+            --white: #FFFFFF;
+            --ice: #F1FAEE;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { line-height: 1.7; color: #333; background: var(--white); scroll-behavior: smooth; }
+        .container { max-width: 1200px; margin: auto; padding: 0 40px; }
+
+        /* --- NAVIGATION --- */
+        nav { background: var(--white); padding: 25px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.6rem; font-weight: 900; color: var(--navy); text-decoration: none; letter-spacing: 1px; }
+        .logo span { color: var(--red); }
+        .nav-links { list-style: none; display: flex; gap: 35px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--navy); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--red); }
+        .btn-quote { background: var(--red); color: white !important; padding: 12px 25px; border-radius: 5px; }
+
+        /* --- ABOUT CONTENT --- */
+        .about-section { padding: 100px 0; }
+        .flex-row { display: flex; gap: 60px; align-items: center; flex-wrap: wrap; }
+        .flex-text { flex: 1; min-width: 350px; }
+        .flex-img { flex: 1; min-width: 350px; position: relative; }
+        .flex-img img { width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .flex-img::after { content: ''; position: absolute; top: 20px; left: -20px; width: 100%; height: 100%; border-left: 8px solid var(--red); border-bottom: 8px solid var(--red); z-index: -1; border-radius: 0 0 0 12px; }
+        
+        h1 { font-size: 3.5rem; color: var(--navy); font-weight: 900; line-height: 1.1; margin-bottom: 25px; text-transform: uppercase; }
+        p { margin-bottom: 20px; font-size: 1.15rem; color: #555; }
+
+        /* --- VALUES SECTION --- */
+        .values { background: var(--navy); color: white; padding: 100px 0; text-align: center; }
+        .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
+        .value-card i { font-size: 3rem; color: var(--red); margin-bottom: 20px; }
+        .value-card h3 { font-size: 1.5rem; margin-bottom: 15px; text-transform: uppercase; font-weight: 900; }
+        .value-card p { color: #cbd5e1; font-size: 1rem; }
+
+        /* --- CTA --- */
+        .cta { text-align: center; padding: 100px 0; background: var(--ice); }
+        .btn-red { background: var(--red); color: white; padding: 20px 45px; text-decoration: none; font-weight: 900; border-radius: 5px; display: inline-block; transition: 0.3s; }
+        .btn-red:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(217, 4, 41, 0.3); }
+
+        footer { background: #050b12; color: #777; text-align: center; padding: 40px 0; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container nav-flex">
+        <a href="index.html" class="logo">EAGLE <span>CONCRETE COATINGS</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html" style="color: var(--red);">About Us</a></li>
+            <li><a href="index.html#contact" class="btn-quote">Get Free Quote</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="container about-section">
+    <div class="flex-row">
+        <div class="flex-text">
+            <h1>Locally Owned.<br>Minnesota Tough.</h1>
+            <p>At Eagle Concrete Coatings LLC, we don’t just "paint" floors. We provide industrial-grade protection designed specifically to survive the brutal Minnesota freeze-thaw cycles.</p>
+            <p>Based in the South Metro, we are a locally owned team dedicated to transforming cracked, dusty concrete into beautiful, showroom-quality spaces. We believe in doing the job right the first time—using diamond-grind preparation and premium Polyurea systems that last a lifetime.</p>
+        </div>
+        <div class="flex-img">
+            <img src="https://images.squarespace-cdn.com/content/v1/688cc62ba523671a677156ff/d271e64b-3927-4a9a-9f24-130774327dec/Jason-Garage-3.jpg" alt="Eagle Concrete Coatings Project">
+        </div>
+    </div>
+</section>
+
+<section class="values">
+    <div class="container">
+        <h2 style="font-size: 2.5rem; font-weight: 900; text-transform: uppercase;">The Eagle Promise</h2>
+        <div class="value-grid">
+            <div class="value-card">
+                <i class="fas fa-certificate"></i>
+                <h3>Quality First</h3>
+                <p>We use 100% solids Polyurea—4x stronger and much more flexible than standard epoxy. It won't chip, peel, or yellow.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-clock"></i>
+                <h3>1-Day Install</h3>
+                <p>Our professional crew completes most residential garages in just one day. Walk on it in 6 hours; park on it in 24.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>South Metro Local</h3>
+                <p>Proudly serving Lakeville, Burnsville, Apple Valley, and the entire South Metro area with honest, local service.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2 style="font-size: 2.5rem; font-weight: 900; color: var(--navy); margin-bottom: 20px;">Ready to Upgrade Your Floor?</h2>
+        <p style="margin-bottom: 40px;">Contact us today for a free, no-obligation estimate at your home or shop.</p>
+        <a href="index.html#contact" class="btn-red">GET A FREE QUOTE</a>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Eagle Concrete Coatings LLC | (952) 769-7905</p>
+</footer>
+
+</body>
+</html>

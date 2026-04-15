@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Eagle Concrete Coatings LLC</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0D1B2E;
+            --red: #D90429;
+            --white: #FFFFFF;
+            --ice: #F1FAEE;
+            --light-gray: #F4F7F9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { line-height: 1.6; color: var(--navy); background: var(--white); scroll-behavior: smooth; }
+        .container { max-width: 1400px; margin: auto; padding: 0 40px; }
+
+        /* --- NAVIGATION --- */
+        nav { background: var(--white); padding: 25px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.6rem; font-weight: 900; color: var(--navy); text-decoration: none; letter-spacing: 1px; }
+        .logo span { color: var(--red); }
+        .nav-links { list-style: none; display: flex; gap: 35px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--navy); font-weight: 700; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--red); }
+        .btn-quote { background: var(--red); color: white !important; padding: 12px 25px; border-radius: 5px; }
+
+        /* --- PAGE HEADER --- */
+        .page-header { background: var(--navy); color: white; padding: 80px 0; text-align: center; }
+        .page-header h1 { font-size: 3.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; }
+
+        /* --- GALLERY SECTION --- */
+        .gallery { padding: 80px 0; }
+        .gallery h2 { text-align: center; margin-bottom: 60px; font-size: 2.8rem; font-weight: 900; }
+        
+        /* Filter/Chip Display (Optional, looks nice) */
+        .chip-options { display: flex; justify-content: center; gap: 15px; margin-bottom: 50px; flex-wrap: wrap; }
+        .chip-swatch { width: 100px; text-align: center; font-size: 0.8rem; font-weight: 700; }
+        .chip-swatch img { width: 100%; border-radius: 50%; border: 3px solid #eee; margin-bottom: 10px; cursor: pointer; }
+        .chip-swatch img:hover { border-color: var(--red); }
+
+        /* Grid */
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); 
+            gap: 20px; 
+        }
+
+        .gallery-item { 
+            position: relative; 
+            overflow: hidden; 
+            border-radius: 12px; 
+            height: 300px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+        }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        
+        .overlay {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(13, 27, 46, 0.95));
+            padding: 25px; color: white; opacity: 0; transition: 0.3s;
+        }
+        .gallery-item:hover .overlay { opacity: 1; }
+        .overlay h3 { text-transform: uppercase; font-weight: 900; font-size: 1.4rem; }
+
+        /* --- BEFORE AND AFTER SPECIFIC --- */
+        .ba-section { padding: 100px 0; background: var(--ice); }
+        .ba-container { display: flex; flex-direction: column; gap: 40px; }
+        .ba-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .ba-image { position: relative; border-radius: 12px; overflow: hidden; height: 350px; }
+        .ba-image img { width: 100%; height: 100%; object-fit: cover; }
+        .label { position: absolute; top: 15px; left: 15px; background: rgba(0,0,0,0.7); color: white; padding: 5px 12px; font-size: 0.8rem; font-weight: 700; border-radius: 4px; }
+        .ba-meta { grid-column: 1 / -1; background: white; padding: 20px 30px; border-radius: 8px; margin-top: -10px; border-bottom: 5px solid var(--red); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+        @media (max-width: 992px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .ba-row { grid-template-columns: 1fr; }
+            .ba-image { height: 250px; }
+            .logo { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">EAGLE <span>CONCRETE COATINGS</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" style="color:var(--red)">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#contact" class="btn-quote">Get Free Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Our Transformations</h1>
+            <p>Real results for real Minnesota homeowners.</p>
+        </div>
+    </header>
+
+   <section class="gallery container">
+        <h2>Premium Polyurea Finishes</h2>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://stonecareoftexas.com/wp-content/uploads/2024/07/garage-floor-coatings-img.jpg" alt="Full Broadcast Gray">
+                <div class="overlay">
+                    <h3>Residential Garage Transformation</h3>
+                    <p>Lakeville, MN</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.garageflooringllc.com/wp-content/uploads/20220918_141432-1-scaled.jpg" alt="Diamond Grinding Prep">
+                <div class="overlay">
+                    <h3>High-Gloss Commercial Shop Floor</h3>
+                    <p>Burnsville, MN</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.jinyupaint.com/wp-content/uploads/2025/10/3-Coat-Polyurea-Garage-Floor-Coating-Kit.jpg" alt="Finished Garage">
+                <div class="overlay">
+                    <h3>Showroom-Quality Garage Finish</h3>
+                    <p>Maple Grove, MN</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ba-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 60px;">The Eagle Difference</h2>
+            
+            <div class="ba-container">
+                <div class="ba-row">
+                    <div class="ba-image">
+                        <span class="label">BEFORE</span>
+                        <img src="https://eagleconcretecoatings.com/_next/image?url=%2Fprojects%2Fbefore-after%2Fgarage-after-01.png&w=3840&q=75" alt="Old Concrete">
+                    </div>
+                    <div class="ba-image">
+                        <span class="label" style="background:var(--red);">AFTER</span>
+                        <img src="https://eagleconcretecoatings.com/_next/image?url=%2Fprojects%2Fbefore-after%2Fgarage-before-01.png&w=3840&q=75" alt="New Coating">
+                    </div>
+                    <div class="ba-meta">
+                        <h3>South Metro Transformation</h3>
+                        <p>We repaired the deep cracks caused by MN freeze-thaw cycles and applied a lifetime Polyurea finish.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ba-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">The Eagle Difference</h2>
+            
+            <div class="ba-container">
+                <div class="ba-row">
+                    <div class="ba-image">
+                        <span class="label">BEFORE</span>
+                        <img src="https://eagleconcretecoatings.com/_next/image?url=%2Fprojects%2Fbefore-after%2Fgarage-before-04.png&w=3840&q=75" alt="Cracked Uncoated Concrete">
+                    </div>
+                    <div class="ba-image">
+                        <span class="label" style="background:var(--red);">AFTER</span>
+                        <img src="https://eagleconcretecoatings.com/_next/image?url=%2Fprojects%2Fbefore-after%2Fgarage-after-04.png&w=3840&q=75" alt="Coated Polyurea Floor">
+                    </div>
+                    <div class="ba-meta">
+                        <h3>South Metro Garage Transformation</h3>
+                        <p>Complete repair of spalling and cracks. Installed 1-Day Polyurea Chip System (Gray Blend) with lifetime warranty.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="text-align: center; padding: 60px 0; color: #777;">
+            <p>&copy; 2026 Eagle Concrete Coatings LLC. Licensed & Insured. Serving Minnesota.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
